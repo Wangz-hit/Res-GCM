@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "res-gcm"
+version = "0.1.0"
+description = "Damage trend prediction using residual graph convolution and Markov correction"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23", "pandas>=1.5", "scikit-learn>=1.2", "torch>=2.0"]
+
+[tool.setuptools.packages.find]
+include = ["resgcm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
